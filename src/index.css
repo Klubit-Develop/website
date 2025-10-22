@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+:root {
+    --font-helvetica-now-display: 'Helvetica Now Display', sans-serif;
+    background-color: #000000;
+}

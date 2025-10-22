@@ -1,0 +1,44 @@
+{
+    "seo": {
+        "title": "Klubit - Plataforma de Ocio Inteligente con IA",
+        "description": "Klubit es la primera plataforma de ocio con IA nativa. Conecta locales, RRPPs, usuarios y marcas. Gestiona reservas, eventos y campañas.",
+        "keywords": "klubit, ocio nocturno, inteligencia artificial, reservas, eventos, discotecas, bares, RRPPs, gestión de locales",
+        "author": "Klubit Technologies",
+        "ogTitle": "Klubit - Revoluciona tu Ocio Nocturno con IA",
+        "ogDescription": "La plataforma todo-en-uno para gestionar tu ocio nocturno. IA, reservas inteligentes y conexión directa entre locales, RRPPs y usuarios.",
+        "twitterTitle": "Klubit - Ocio Inteligente con IA",
+        "twitterDescription": "Primera plataforma de ocio con IA nativa. Conecta, gestiona y disfruta."
+    },
+    "footer": {
+        "features": {
+            "title": "Funcionalidades",
+            "forBrands": "Para marcas",
+            "forClubs": "Para klubs",
+            "forUsers": "Para usuarios",
+            "forPR": "Para RRPPs"
+        },
+        "company": {
+            "title": "Empresa",
+            "about": "Conócenos",
+            "contact": "Contacta",
+            "faq": "Preguntas frecuentes"
+        },
+        "legal": {
+            "title": "Legal",
+            "legalNotice": "Aviso legal",
+            "privacyPolicy": "Política de privacidad",
+            "cookiesPolicy": "Política de cookies",
+            "termsConditions": "Términos y condiciones"
+        },
+        "copyright": "© 2024 KLUBIT TECHNOLOGIES. Todos los derechos reservados.",
+        "downloadApp": {
+            "title": "Descarga la app",
+            "description": "Descubre todas las ventajas y beneficios de Klubit."
+        },
+        "language": {
+            "title": "Idioma",
+            "spanish": "Español",
+            "english": "English"
+        }
+    }
+}

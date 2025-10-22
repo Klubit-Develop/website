@@ -1,0 +1,44 @@
+{
+    "seo": {
+        "title": "Klubit - Intelligent Entertainment Platform with AI",
+        "description": "Klubit is the first native AI entertainment platform. Connect venues, PRs, users and brands. Manage reservations, events and campaigns.",
+        "keywords": "klubit, nightlife, artificial intelligence, reservations, events, nightclubs, bars, PRs, venue management",
+        "author": "Klubit Technologies",
+        "ogTitle": "Klubit - Revolutionize Your Nightlife with AI",
+        "ogDescription": "The all-in-one platform to manage your nightlife. AI, smart reservations and direct connection between venues, PRs and users.",
+        "twitterTitle": "Klubit - Smart Entertainment with AI",
+        "twitterDescription": "First native AI entertainment platform. Connect, manage and enjoy."
+    },
+    "footer": {
+        "features": {
+            "title": "Features",
+            "forBrands": "For brands",
+            "forClubs": "For clubs",
+            "forUsers": "For users",
+            "forPR": "For PRs"
+        },
+        "company": {
+            "title": "Company",
+            "about": "About us",
+            "contact": "Contact",
+            "faq": "FAQ"
+        },
+        "legal": {
+            "title": "Legal",
+            "legalNotice": "Legal notice",
+            "privacyPolicy": "Privacy policy",
+            "cookiesPolicy": "Cookies policy",
+            "termsConditions": "Terms and conditions"
+        },
+        "copyright": "© 2024 KLUBIT TECHNOLOGIES. All rights reserved.",
+        "downloadApp": {
+            "title": "Download the app",
+            "description": "Discover all the advantages and benefits of Klubit."
+        },
+        "language": {
+            "title": "Language",
+            "spanish": "Español",
+            "english": "English"
+        }
+    }
+}
