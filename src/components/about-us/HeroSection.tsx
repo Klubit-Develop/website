@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import heroBackground from '../../assets/images/home/hero-background.jpg';
+import heroBackground from '../../assets/images/about-us/hero-background.jpg';
 
 function HeroSection() {
     return (
@@ -31,10 +31,10 @@ function HeroSection() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.3 }}
                 >
-                    El futuro del ocio es inteligente.
+                    Conócenos
                 </motion.h1>
                 <motion.p
-                    className="mb-8 max-w-2xl"
+                    className="mb-8 max-w-4xl"
                     style={{
                         color: '#ECF0F5',
                         fontFamily: '"Helvetica Now Display", -apple-system, BlinkMacSystemFont, sans-serif',
@@ -47,29 +47,8 @@ function HeroSection() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.5 }}
                 >
-                    La plataforma que conecta Klubs, usuarios, RRPPs y marcas con IA
+                    Nacimos con una visión clara: conectar personas, locales y marcas en una experiencia digital, personalizada y con propósito. Este es el viaje de Klubit.
                 </motion.p>
-                <motion.button
-                    className="px-8 py-4 rounded-lg transition transform hover:scale-105 cursor-pointer"
-                    style={{
-                        overflow: 'hidden',
-                        color: '#F9F9FA',
-                        textAlign: 'center',
-                        textOverflow: 'ellipsis',
-                        whiteSpace: 'nowrap',
-                        backgroundColor: '#FF336D',
-                        fontFamily: '"Helvetica Now Display", -apple-system, BlinkMacSystemFont, sans-serif',
-                        fontSize: '16px',
-                        fontStyle: 'normal',
-                        fontWeight: 700,
-                        lineHeight: 'normal'
-                    }}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.8, delay: 0.7 }}
-                >
-                    Solicitar demo
-                </motion.button>
             </motion.div>
         </section>
     );
