@@ -1,23 +1,15 @@
 import { useEffect } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Navigation from './components/Navigation';
-import HeroSection from './components/HeroSection';
-import WhatIsKlubit from './components/WhatIsKlubit';
-import StatsSection from './components/StatsSection';
-import FeaturesKlubs from './components/FeaturesKlubs';
-import FeaturesRRPPs from './components/FeaturesRRPPs';
-import FeaturesEvents from './components/FeaturesEvents';
-import FeaturesCustomers from './components/FeaturesCustomers';
-import LargeImageSection from './components/LargeImageSection';
-import AdvantagesSection from './components/AdvantagesSection';
-import Form from './components/Form';
-import Footer from './components/Footer';
+import SEOHead from './components/common/SEOHead';
+
+import Layout from './pages/Layout';
+import Home from './pages/Home';
+import Conocenos from './pages/AboutUs';
 
 import { useNavigationStore } from './stores/useNavigationStore';
-import './locales/i18n';
-
 import './assets/fonts/HelveticaNowDisplay.css';
-import SEOHead from './components/SEOHead';
+import './locales/i18n';
 
 function App() {
   const { isDropdownOpen, closeDropdown } = useNavigationStore();
@@ -51,20 +43,14 @@ function App() {
   return (
     <>
       <SEOHead />
-      <div style={{ backgroundColor: '#000000' }} className="text-white min-h-screen">
-        <Navigation />
-        <HeroSection />
-        <WhatIsKlubit />
-        <StatsSection />
-        <FeaturesKlubs />
-        <FeaturesRRPPs />
-        <FeaturesEvents />
-        <FeaturesCustomers />
-        <LargeImageSection />
-        <AdvantagesSection />
-        <Form />
-        <Footer />
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="conocenos" element={<Conocenos />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
