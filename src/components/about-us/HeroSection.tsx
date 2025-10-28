@@ -5,10 +5,13 @@ function HeroSection() {
     return (
         <section className="relative h-screen flex items-end overflow-hidden">
             <div className="absolute inset-0">
-                <img
+                <motion.img
                     src={heroBackground}
-                    alt="Club atmosphere"
+                    alt="Hero Background"
                     className="w-full h-full object-cover"
+                    initial={{ opacity: 0, scale: 1.1 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 1.5, ease: "easeOut" }}
                 />
                 <div className="absolute inset-0 bg-linear-to-b from-black/30 via-transparent to-black"></div>
             </div>

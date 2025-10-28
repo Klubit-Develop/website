@@ -2,10 +2,15 @@ import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import SEOHead from './components/common/SEOHead';
+import ScrollToTop from './components/common/ScrollToTop';
 
 import Layout from './pages/Layout';
 import Home from './pages/Home';
-import Conocenos from './pages/AboutUs';
+import AboutUs from './pages/AboutUs';
+import Klubs from './pages/Klubs';
+import Users from './pages/Users';
+import Rrpps from './pages/Rrpps';
+import Brands from './pages/Brands';
 
 import { useNavigationStore } from './stores/useNavigationStore';
 import './assets/fonts/HelveticaNowDisplay.css';
@@ -44,10 +49,15 @@ function App() {
     <>
       <SEOHead />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="conocenos" element={<Conocenos />} />
+            <Route path="about-us" element={<AboutUs />} />
+            <Route path="klubs" element={<Klubs />} />
+            <Route path="users" element={<Users />} />
+            <Route path="rrpps" element={<Rrpps />} />
+            <Route path="brands" element={<Brands />} />
           </Route>
         </Routes>
       </BrowserRouter>

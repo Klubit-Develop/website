@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 import { useNavigationStore } from '../../stores/useNavigationStore';
 
 function Navigation() {
-    const { 
-        isMenuOpen, 
-        isDropdownOpen, 
-        isClosing, 
-        toggleMenu, 
-        toggleDropdown, 
-        closeDropdown 
+    const {
+        isMenuOpen,
+        isDropdownOpen,
+        isClosing,
+        toggleMenu,
+        toggleDropdown,
+        closeDropdown
     } = useNavigationStore();
 
     return (
@@ -45,7 +45,7 @@ function Navigation() {
                     animation: dropdownFadeOut 0.3s ease-out forwards;
                 }
             `}</style>
-            
+
             <nav className="fixed top-0 w-full bg-black/30 backdrop-blur-md z-50 border-b border-white/10">
                 <div className="w-full px-8 sm:px-12 lg:px-24">
                     <div className="flex items-center justify-between h-16">
@@ -75,10 +75,10 @@ function Navigation() {
                                     onClick={toggleDropdown}
                                 >
                                     Para quién
-                                    <svg 
-                                        className="ml-1 w-4 h-4 transition-transform duration-300" 
-                                        fill="none" 
-                                        stroke="currentColor" 
+                                    <svg
+                                        className="ml-1 w-4 h-4 transition-transform duration-300"
+                                        fill="none"
+                                        stroke="currentColor"
                                         viewBox="0 0 24 24"
                                         style={{
                                             transform: isDropdownOpen ? 'rotate(180deg)' : 'rotate(0deg)'
@@ -95,18 +95,17 @@ function Navigation() {
                                             onClick={closeDropdown}
                                             style={{ backgroundColor: 'transparent' }}
                                         />
-                                        <div 
-                                            className={`dropdown-menu-container hidden md:block absolute left-1/2 -translate-x-1/2 mt-6 w-[680px] rounded-[32px] shadow-2xl px-6 py-6 z-50 ${
-                                                isClosing ? 'dropdown-menu-exit' : 'dropdown-menu-enter'
-                                            }`}
-                                            style={{ 
-                                                backgroundColor: '#000000', 
+                                        <div
+                                            className={`dropdown-menu-container hidden md:block absolute left-1/2 -translate-x-1/2 mt-6 w-[680px] rounded-[32px] shadow-2xl px-6 py-6 z-50 ${isClosing ? 'dropdown-menu-exit' : 'dropdown-menu-enter'
+                                                }`}
+                                            style={{
+                                                backgroundColor: '#000000',
                                                 border: '1px solid rgba(243, 243, 244, 0.1)',
                                                 top: '100%'
                                             }}
                                         >
                                             <div className="grid grid-cols-2 gap-x-4 gap-y-4">
-                                                <div className="space-y-2 cursor-pointer group p-4 rounded-2xl transition-all hover:bg-[#1A1D24]">
+                                                <Link to="/klubs" className="space-y-2 cursor-pointer group p-4 rounded-2xl transition-all hover:bg-[#1A1D24] block" onClick={closeDropdown}>
                                                     <div className="flex items-center gap-3">
                                                         <Globe size={22} strokeWidth={1.5} className="text-[#ECF0F5] group-hover:text-[#E5FF88] transition-colors" />
                                                         <h3 className="text-[#ECF0F5] group-hover:text-[#E5FF88] transition-colors" style={{
@@ -126,9 +125,9 @@ function Navigation() {
                                                     }}>
                                                         Las herramientas inteligentes para tus eventos y espacios.
                                                     </p>
-                                                </div>
+                                                </Link>
 
-                                                <div className="space-y-2 cursor-pointer group p-4 rounded-2xl transition-all hover:bg-[#1A1D24]">
+                                                <Link to="/users" className="space-y-2 cursor-pointer group p-4 rounded-2xl transition-all hover:bg-[#1A1D24] block" onClick={closeDropdown}>
                                                     <div className="flex items-center gap-3">
                                                         <User size={22} strokeWidth={1.5} className="text-[#ECF0F5] group-hover:text-[#E5FF88] transition-colors" />
                                                         <h3 className="text-[#ECF0F5] group-hover:text-[#E5FF88] transition-colors" style={{
@@ -148,9 +147,9 @@ function Navigation() {
                                                     }}>
                                                         Descubre todos los beneficios que Klubit tiene para ti.
                                                     </p>
-                                                </div>
+                                                </Link>
 
-                                                <div className="space-y-2 cursor-pointer group p-4 rounded-2xl transition-all hover:bg-[#1A1D24]">
+                                                <Link to="/rrpps" className="space-y-2 cursor-pointer group p-4 rounded-2xl transition-all hover:bg-[#1A1D24] block" onClick={closeDropdown}>
                                                     <div className="flex items-center gap-3">
                                                         <Award size={22} strokeWidth={1.5} className="text-[#ECF0F5] group-hover:text-[#E5FF88] transition-colors" />
                                                         <h3 className="text-[#ECF0F5] group-hover:text-[#E5FF88] transition-colors" style={{
@@ -170,9 +169,9 @@ function Navigation() {
                                                     }}>
                                                         Gestiona tu comunidad y gana más con menos.
                                                     </p>
-                                                </div>
+                                                </Link>
 
-                                                <div className="space-y-2 cursor-pointer group p-4 rounded-2xl transition-all hover:bg-[#1A1D24]">
+                                                <Link to="/brands" className="space-y-2 cursor-pointer group p-4 rounded-2xl transition-all hover:bg-[#1A1D24] block" onClick={closeDropdown}>
                                                     <div className="flex items-center gap-3">
                                                         <Tag size={22} strokeWidth={1.5} className="text-[#ECF0F5] group-hover:text-[#E5FF88] transition-colors" />
                                                         <h3 className="text-[#ECF0F5] group-hover:text-[#E5FF88] transition-colors" style={{
@@ -192,29 +191,29 @@ function Navigation() {
                                                     }}>
                                                         Llega a tu audiencia con datos y activaciones reales.
                                                     </p>
-                                                </div>
+                                                </Link>
                                             </div>
                                         </div>
                                     </>
                                 )}
                             </div>
 
-                            <Link 
-                                to="/conocenos" 
-                                className="hover:transition cursor-pointer" 
+                            <Link
+                                to="/about-us"
+                                className="hover:transition cursor-pointer"
                                 style={{
                                     color: '#ECF0F5',
                                     fontFamily: '"Helvetica Now Display", -apple-system, BlinkMacSystemFont, sans-serif',
                                     fontSize: '14px',
                                     fontWeight: 700,
                                     lineHeight: 'normal'
-                                }} 
-                                onMouseEnter={(e) => e.currentTarget.style.color = '#FF336D'} 
+                                }}
+                                onMouseEnter={(e) => e.currentTarget.style.color = '#FF336D'}
                                 onMouseLeave={(e) => e.currentTarget.style.color = '#ECF0F5'}
                             >
                                 Conócenos
                             </Link>
-                            <button className="flex justify-center items-center hover:bg-white/20 transition cursor-pointer" style={{
+                            <Link to="https://manager.klubit.io/" className="flex justify-center items-center hover:bg-white/20 transition cursor-pointer" style={{
                                 padding: '6px 8px',
                                 gap: '8px',
                                 borderRadius: '8px',
@@ -227,7 +226,7 @@ function Navigation() {
                                 lineHeight: 'normal'
                             }}>
                                 Accede al Klub Manager
-                            </button>
+                            </Link>
                         </div>
 
                         <button
@@ -246,7 +245,7 @@ function Navigation() {
                             <div className="flex-1">
                                 {/* Para quién dropdown */}
                                 <div className="space-y-3 mb-4">
-                                    <button 
+                                    <button
                                         className="flex items-center justify-between w-full py-2 hover:text-[#E5FF88] transition-colors"
                                         style={{
                                             color: '#ECF0F5',
@@ -261,10 +260,10 @@ function Navigation() {
                                         }}
                                     >
                                         Para quién
-                                        <svg 
-                                            className="w-4 h-4 transition-transform duration-300" 
-                                            fill="none" 
-                                            stroke="currentColor" 
+                                        <svg
+                                            className="w-4 h-4 transition-transform duration-300"
+                                            fill="none"
+                                            stroke="currentColor"
                                             viewBox="0 0 24 24"
                                             style={{
                                                 transform: isDropdownOpen ? 'rotate(180deg)' : 'rotate(0deg)'
@@ -277,31 +276,34 @@ function Navigation() {
                                     {isDropdownOpen && (
                                         <div className="space-y-4 pl-2">
                                             {/* Klubs */}
+
                                             <div className="flex items-start gap-3 py-3 group cursor-pointer">
-                                                <Globe size={20} strokeWidth={1.5} className="text-[#ECF0F5] group-hover:text-[#E5FF88] transition-colors" style={{ flexShrink: 0, marginTop: '2px' }} />
-                                                <div>
-                                                    <h4 className="text-[#ECF0F5] group-hover:text-[#E5FF88] transition-colors" style={{
-                                                        fontFamily: '"Helvetica Now Display", -apple-system, BlinkMacSystemFont, sans-serif',
-                                                        fontSize: '16px',
-                                                        fontWeight: 500,
-                                                        marginBottom: '4px'
-                                                    }}>
-                                                        Klubs
-                                                    </h4>
-                                                    <p style={{
-                                                        color: '#98AAC0',
-                                                        fontFamily: '"Helvetica Now Display", -apple-system, BlinkMacSystemFont, sans-serif',
-                                                        fontSize: '14px',
-                                                        fontWeight: 400,
-                                                        lineHeight: '20px'
-                                                    }}>
-                                                        Las herramientas inteligentes para tus eventos y espacios.
-                                                    </p>
-                                                </div>
+                                                <Link to="/klubs">
+                                                    <Globe size={20} strokeWidth={1.5} className="text-[#ECF0F5] group-hover:text-[#E5FF88] transition-colors" style={{ flexShrink: 0, marginTop: '2px' }} />
+                                                    <div>
+                                                        <h4 className="text-[#ECF0F5] group-hover:text-[#E5FF88] transition-colors" style={{
+                                                            fontFamily: '"Helvetica Now Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                                                            fontSize: '16px',
+                                                            fontWeight: 500,
+                                                            marginBottom: '4px'
+                                                        }}>
+                                                            Klubs
+                                                        </h4>
+                                                        <p style={{
+                                                            color: '#98AAC0',
+                                                            fontFamily: '"Helvetica Now Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                                                            fontSize: '14px',
+                                                            fontWeight: 400,
+                                                            lineHeight: '20px'
+                                                        }}>
+                                                            Las herramientas inteligentes para tus eventos y espacios.
+                                                        </p>
+                                                    </div>
+                                                </Link>
                                             </div>
 
                                             {/* Usuarios */}
-                                            <div className="flex items-start gap-3 py-3 group cursor-pointer">
+                                            <Link to="/usuarios" className="flex items-start gap-3 py-3 group cursor-pointer" onClick={toggleMenu}>
                                                 <User size={20} strokeWidth={1.5} className="text-[#ECF0F5] group-hover:text-[#E5FF88] transition-colors" style={{ flexShrink: 0, marginTop: '2px' }} />
                                                 <div>
                                                     <h4 className="text-[#ECF0F5] group-hover:text-[#E5FF88] transition-colors" style={{
@@ -322,10 +324,10 @@ function Navigation() {
                                                         Descubre todos los beneficios que Klubit tiene para ti.
                                                     </p>
                                                 </div>
-                                            </div>
+                                            </Link>
 
                                             {/* RRPPs */}
-                                            <div className="flex items-start gap-3 py-3 group cursor-pointer">
+                                            <Link to="/rrpps" className="flex items-start gap-3 py-3 group cursor-pointer" onClick={toggleMenu}>
                                                 <Award size={20} strokeWidth={1.5} className="text-[#ECF0F5] group-hover:text-[#E5FF88] transition-colors" style={{ flexShrink: 0, marginTop: '2px' }} />
                                                 <div>
                                                     <h4 className="text-[#ECF0F5] group-hover:text-[#E5FF88] transition-colors" style={{
@@ -346,10 +348,10 @@ function Navigation() {
                                                         Gestiona tu comunidad y gana más con menos.
                                                     </p>
                                                 </div>
-                                            </div>
+                                            </Link>
 
                                             {/* Marcas */}
-                                            <div className="flex items-start gap-3 py-3 group cursor-pointer">
+                                            <Link to="/marcas" className="flex items-start gap-3 py-3 group cursor-pointer" onClick={toggleMenu}>
                                                 <Tag size={20} strokeWidth={1.5} className="text-[#ECF0F5] group-hover:text-[#E5FF88] transition-colors" style={{ flexShrink: 0, marginTop: '2px' }} />
                                                 <div>
                                                     <h4 className="text-[#ECF0F5] group-hover:text-[#E5FF88] transition-colors" style={{
@@ -370,15 +372,15 @@ function Navigation() {
                                                         Llega a tu audiencia con datos y activaciones reales.
                                                     </p>
                                                 </div>
-                                            </div>
+                                            </Link>
                                         </div>
                                     )}
                                 </div>
 
                                 {/* Conócenos */}
                                 <div className="border-t border-white/10 pt-4">
-                                    <Link 
-                                        to="/conocenos" 
+                                    <Link
+                                        to="/conocenos"
                                         className="block py-3"
                                         style={{
                                             color: '#ECF0F5',

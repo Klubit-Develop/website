@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // ← Agregado
 import { useTranslation } from 'react-i18next';
 import { useLanguageStore } from '../../stores/useLanguageStore';
 import appleStore from '../../assets/images/common/apple-store.png';
@@ -56,48 +57,48 @@ function Footer() {
                         <h4 className="mb-6" style={titleStyle}>{t('footer.features.title')}</h4>
                         <ul className="space-y-5">
                             <li>
-                                <a 
-                                    href="#" 
+                                <Link 
+                                    to="/brands"
                                     className="hover:transition"
                                     style={listItemStyle}
                                     onMouseEnter={(e) => e.currentTarget.style.color = '#FF336D'}
                                     onMouseLeave={(e) => e.currentTarget.style.color = '#ECF0F5'}
                                 >
                                     {t('footer.features.forBrands')}
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a 
-                                    href="#" 
+                                <Link 
+                                    to="/klubs"
                                     className="hover:transition"
                                     style={listItemStyle}
                                     onMouseEnter={(e) => e.currentTarget.style.color = '#FF336D'}
                                     onMouseLeave={(e) => e.currentTarget.style.color = '#ECF0F5'}
                                 >
                                     {t('footer.features.forClubs')}
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a 
-                                    href="#" 
+                                <Link 
+                                    to="/users"
                                     className="hover:transition"
                                     style={listItemStyle}
                                     onMouseEnter={(e) => e.currentTarget.style.color = '#FF336D'}
                                     onMouseLeave={(e) => e.currentTarget.style.color = '#ECF0F5'}
                                 >
                                     {t('footer.features.forUsers')}
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a 
-                                    href="#" 
+                                <Link 
+                                    to="/rrpps"
                                     className="hover:transition"
                                     style={listItemStyle}
                                     onMouseEnter={(e) => e.currentTarget.style.color = '#FF336D'}
                                     onMouseLeave={(e) => e.currentTarget.style.color = '#ECF0F5'}
                                 >
                                     {t('footer.features.forPR')}
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>
@@ -107,15 +108,15 @@ function Footer() {
                         <h4 className="mb-6" style={titleStyle}>{t('footer.company.title')}</h4>
                         <ul className="space-y-5">
                             <li>
-                                <a 
-                                    href="#" 
+                                <Link 
+                                    to="/about-us"
                                     className="hover:transition"
                                     style={listItemStyle}
                                     onMouseEnter={(e) => e.currentTarget.style.color = '#FF336D'}
                                     onMouseLeave={(e) => e.currentTarget.style.color = '#ECF0F5'}
                                 >
                                     {t('footer.company.about')}
-                                </a>
+                                </Link>
                             </li>
                             <li>
                                 <a 
