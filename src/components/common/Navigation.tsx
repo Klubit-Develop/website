@@ -1,5 +1,6 @@
 import { Globe, User, Award, Tag, Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 import { useNavigationStore } from '../../stores/useNavigationStore';
 
 function Navigation() {
@@ -11,6 +12,29 @@ function Navigation() {
         toggleDropdown,
         closeDropdown
     } = useNavigationStore();
+
+    // Bloquear scroll del body cuando el menú móvil está abierto
+    useEffect(() => {
+        if (isMenuOpen) {
+            // Guardar el scroll actual
+            const scrollY = window.scrollY;
+            
+            // Bloquear scroll
+            document.body.style.position = 'fixed';
+            document.body.style.top = `-${scrollY}px`;
+            document.body.style.width = '100%';
+            document.body.style.overflow = 'hidden';
+            
+            return () => {
+                // Restaurar scroll
+                document.body.style.position = '';
+                document.body.style.top = '';
+                document.body.style.width = '';
+                document.body.style.overflow = '';
+                window.scrollTo(0, scrollY);
+            };
+        }
+    }, [isMenuOpen]);
 
     return (
         <>
@@ -213,8 +237,9 @@ function Navigation() {
                             >
                                 Conócenos
                             </Link>
+
                             <Link to="https://manager.klubit.io/" className="flex justify-center items-center hover:bg-white/20 transition cursor-pointer" style={{
-                                padding: '6px 8px',
+                                padding: '12px 16px',
                                 gap: '8px',
                                 borderRadius: '8px',
                                 background: '#252E39',
