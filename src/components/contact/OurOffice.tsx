@@ -1,10 +1,7 @@
-import { useState } from 'react';
 import AnimatedSection from '../common/AnimatedSection';
 import OfficeBackground from '../../assets/images/contact/office-background.png';
 
 function OurOffice() {
-    const [activeTab, setActiveTab] = useState('Usuarios');
-
     const staggerContainer = {
         hidden: { opacity: 0 },
         visible: {
@@ -50,7 +47,7 @@ function OurOffice() {
                     </h2>
                 </AnimatedSection>
 
-                <AnimatedSection variants={staggerContainer} key={activeTab}>
+                <AnimatedSection variants={staggerContainer} key={'Usuarios'}>
                     <div className="mx-auto max-w-6xl">
                         {/* Office Card */}
                         <div
