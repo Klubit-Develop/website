@@ -1,4 +1,5 @@
 import { motion, type Variants } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 import AnimatedSection from '../../components/common/AnimatedSection';
 
@@ -11,6 +12,9 @@ const fadeIn: Variants = {
 };
 
 function CTA() {
+
+    const navigate = useNavigate();
+
     return (
         <section className="py-32 px-8 sm:px-12 lg:px-24" style={{ backgroundColor: '#0C141B' }}>
             <AnimatedSection variants={fadeIn}>
@@ -151,6 +155,7 @@ function CTA() {
                             textOverflow: 'ellipsis',
                             whiteSpace: 'nowrap'
                         }}
+                        onClick={() => navigate('/contacts')}
                     >
                         Contáctanos
                     </motion.button>

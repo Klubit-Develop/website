@@ -1,4 +1,5 @@
 import { motion, type Variants } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 import AnimatedSection from '../../components/common/AnimatedSection';
 
@@ -11,6 +12,8 @@ const fadeIn: Variants = {
 };
 
 function CTA() {
+    const navigate = useNavigate();
+
     return (
         <section className="py-32 px-8 sm:px-12 lg:px-24" style={{ backgroundColor: '#0C141B' }}>
             <AnimatedSection variants={fadeIn}>
@@ -53,8 +56,8 @@ function CTA() {
                             fontWeight: 400,
                             lineHeight: 'normal'
                         }}>
-                            <span style={{ 
-                                marginRight: '16px', 
+                            <span style={{
+                                marginRight: '16px',
                                 color: '#98AAC0',
                                 textAlign: 'center',
                                 fontFamily: '"Helvetica Now Display"',
@@ -72,8 +75,8 @@ function CTA() {
                             fontWeight: 400,
                             lineHeight: 'normal'
                         }}>
-                            <span style={{ 
-                                marginRight: '16px', 
+                            <span style={{
+                                marginRight: '16px',
                                 color: '#98AAC0',
                                 textAlign: 'center',
                                 fontFamily: '"Helvetica Now Display"',
@@ -91,8 +94,8 @@ function CTA() {
                             fontWeight: 400,
                             lineHeight: 'normal'
                         }}>
-                            <span style={{ 
-                                marginRight: '16px', 
+                            <span style={{
+                                marginRight: '16px',
                                 color: '#98AAC0',
                                 textAlign: 'center',
                                 fontFamily: '"Helvetica Now Display"',
@@ -132,6 +135,7 @@ function CTA() {
                             textOverflow: 'ellipsis',
                             whiteSpace: 'nowrap'
                         }}
+                        onClick={() => navigate('/contacts')}
                     >
                         Contáctanos
                     </motion.button>

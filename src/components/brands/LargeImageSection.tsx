@@ -1,9 +1,13 @@
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 import AnimatedSection from '../common/AnimatedSection';
 import discoBackground from '../../assets/images/brands/disco.jpg';
 
 function LargeImageSection() {
+
+    const navigate = useNavigate();
+
     const scaleIn = {
         hidden: { opacity: 0, scale: 0.8 },
         visible: {
@@ -60,6 +64,7 @@ function LargeImageSection() {
                                 textOverflow: 'ellipsis',
                                 whiteSpace: 'nowrap'
                             }}
+                            onClick={() => navigate('/contacts')}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
