@@ -276,31 +276,28 @@ function Navigation() {
                                     {isDropdownOpen && (
                                         <div className="space-y-4 pl-2">
                                             {/* Klubs */}
-
-                                            <div className="flex items-start gap-3 py-3 group cursor-pointer">
-                                                <Link to="/klubs">
-                                                    <Globe size={20} strokeWidth={1.5} className="text-[#ECF0F5] group-hover:text-[#E5FF88] transition-colors" style={{ flexShrink: 0, marginTop: '2px' }} />
-                                                    <div>
-                                                        <h4 className="text-[#ECF0F5] group-hover:text-[#E5FF88] transition-colors" style={{
-                                                            fontFamily: '"Helvetica Now Display", -apple-system, BlinkMacSystemFont, sans-serif',
-                                                            fontSize: '16px',
-                                                            fontWeight: 500,
-                                                            marginBottom: '4px'
-                                                        }}>
-                                                            Klubs
-                                                        </h4>
-                                                        <p style={{
-                                                            color: '#98AAC0',
-                                                            fontFamily: '"Helvetica Now Display", -apple-system, BlinkMacSystemFont, sans-serif',
-                                                            fontSize: '14px',
-                                                            fontWeight: 400,
-                                                            lineHeight: '20px'
-                                                        }}>
-                                                            Las herramientas inteligentes para tus eventos y espacios.
-                                                        </p>
-                                                    </div>
-                                                </Link>
-                                            </div>
+                                            <Link to="/klubs" className="flex items-start gap-3 py-3 group cursor-pointer" onClick={toggleMenu}>
+                                                <Globe size={20} strokeWidth={1.5} className="text-[#ECF0F5] group-hover:text-[#E5FF88] transition-colors" style={{ flexShrink: 0, marginTop: '2px' }} />
+                                                <div>
+                                                    <h4 className="text-[#ECF0F5] group-hover:text-[#E5FF88] transition-colors" style={{
+                                                        fontFamily: '"Helvetica Now Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                                                        fontSize: '16px',
+                                                        fontWeight: 500,
+                                                        marginBottom: '4px'
+                                                    }}>
+                                                        Klubs
+                                                    </h4>
+                                                    <p style={{
+                                                        color: '#98AAC0',
+                                                        fontFamily: '"Helvetica Now Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                                                        fontSize: '14px',
+                                                        fontWeight: 400,
+                                                        lineHeight: '20px'
+                                                    }}>
+                                                        Las herramientas inteligentes para tus eventos y espacios.
+                                                    </p>
+                                                </div>
+                                            </Link>
 
                                             {/* Usuarios */}
                                             <Link to="/usuarios" className="flex items-start gap-3 py-3 group cursor-pointer" onClick={toggleMenu}>
@@ -382,6 +379,7 @@ function Navigation() {
                                     <Link
                                         to="/conocenos"
                                         className="block py-3"
+                                        onClick={toggleMenu}
                                         style={{
                                             color: '#ECF0F5',
                                             fontFamily: '"Helvetica Now Display", -apple-system, BlinkMacSystemFont, sans-serif',
