@@ -13,6 +13,10 @@ import Rrpps from './pages/Rrpps';
 import Brands from './pages/Brands';
 import Contact from './pages/Contact';
 import Faqs from './pages/Faqs';
+import TermsConditions from './pages/TermsConditions';
+import LegalNotices from './pages/LegalNotices';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import CookiesPolicy from './pages/CookiesPolicy';
 
 import { useNavigationStore } from './stores/useNavigationStore';
 import './assets/fonts/HelveticaNowDisplay.css';
@@ -62,6 +66,10 @@ function App() {
             <Route path="brands" element={<Brands />} />
             <Route path="contact" element={<Contact />} />
             <Route path="faqs" element={<Faqs />} />
+            <Route path="terms-conditions" element={<TermsConditions />} />
+            <Route path="legal-notices" element={<LegalNotices />} />
+            <Route path="privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="cookies-policy" element={<CookiesPolicy />} />
           </Route>
         </Routes>
       </BrowserRouter>

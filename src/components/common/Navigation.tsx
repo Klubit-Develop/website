@@ -96,7 +96,7 @@ function Navigation() {
                                             style={{ backgroundColor: 'transparent' }}
                                         />
                                         <div
-                                            className={`dropdown-menu-container hidden md:block absolute left-1/2 -translate-x-1/2 mt-6 w-[680px] rounded-[32px] shadow-2xl px-6 py-6 z-50 ${isClosing ? 'dropdown-menu-exit' : 'dropdown-menu-enter'
+                                            className={`dropdown-menu-container hidden md:block absolute left-1/2 -translate-x-1/2 mt-6 w-[680px] rounded-4xl shadow-2xl px-6 py-6 z-50 ${isClosing ? 'dropdown-menu-exit' : 'dropdown-menu-enter'
                                                 }`}
                                             style={{
                                                 backgroundColor: '#000000',

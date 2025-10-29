@@ -149,7 +149,7 @@ function Footer() {
                         <ul className="space-y-5">
                             <li>
                                 <a 
-                                    href="#" 
+                                    href="/legal-notices" 
                                     className="hover:transition"
                                     style={listItemStyle}
                                     onMouseEnter={(e) => e.currentTarget.style.color = '#FF336D'}
@@ -160,7 +160,7 @@ function Footer() {
                             </li>
                             <li>
                                 <a 
-                                    href="#" 
+                                    href="/privacy-policy" 
                                     className="hover:transition"
                                     style={listItemStyle}
                                     onMouseEnter={(e) => e.currentTarget.style.color = '#FF336D'}
@@ -171,7 +171,7 @@ function Footer() {
                             </li>
                             <li>
                                 <a 
-                                    href="#" 
+                                    href="/cookies-policy" 
                                     className="hover:transition"
                                     style={listItemStyle}
                                     onMouseEnter={(e) => e.currentTarget.style.color = '#FF336D'}
@@ -182,7 +182,7 @@ function Footer() {
                             </li>
                             <li>
                                 <a 
-                                    href="#" 
+                                    href="/terms-conditions" 
                                     className="hover:transition"
                                     style={listItemStyle}
                                     onMouseEnter={(e) => e.currentTarget.style.color = '#FF336D'}
