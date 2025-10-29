@@ -177,7 +177,7 @@ function Form() {
                 </AnimatedSection>
 
                 <AnimatedSection variants={fadeIn}>
-                    <div className="w-full pl-8 md:pl-16 lg:pl-24 pr-8 md:pr-16 lg:pr-24">
+                    <div className="w-full md:pl-16 lg:pl-24 md:pr-16 lg:pr-24">
                         <form onSubmit={handleSubmit} className="space-y-6 w-full">
                         <div className="grid md:grid-cols-2 gap-6">
                             <div>
