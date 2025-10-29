@@ -70,7 +70,7 @@ function Navigation() {
                                         fontWeight: 700,
                                         lineHeight: 'normal'
                                     }}
-                                    onMouseEnter={(e) => e.currentTarget.style.color = '#FF336D'}
+                                    onMouseEnter={(e) => e.currentTarget.style.color = '#E5FF88'}
                                     onMouseLeave={(e) => e.currentTarget.style.color = '#ECF0F5'}
                                     onClick={toggleDropdown}
                                 >
@@ -208,7 +208,7 @@ function Navigation() {
                                     fontWeight: 700,
                                     lineHeight: 'normal'
                                 }}
-                                onMouseEnter={(e) => e.currentTarget.style.color = '#FF336D'}
+                                onMouseEnter={(e) => e.currentTarget.style.color = '#E5FF88'}
                                 onMouseLeave={(e) => e.currentTarget.style.color = '#ECF0F5'}
                             >
                                 Conócenos
