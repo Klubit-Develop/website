@@ -12,6 +12,7 @@ import Users from './pages/Users';
 import Rrpps from './pages/Rrpps';
 import Brands from './pages/Brands';
 import Contact from './pages/Contact';
+import Faqs from './pages/Faqs';
 
 import { useNavigationStore } from './stores/useNavigationStore';
 import './assets/fonts/HelveticaNowDisplay.css';
@@ -60,6 +61,7 @@ function App() {
             <Route path="rrpps" element={<Rrpps />} />
             <Route path="brands" element={<Brands />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="faqs" element={<Faqs />} />
           </Route>
         </Routes>
       </BrowserRouter>

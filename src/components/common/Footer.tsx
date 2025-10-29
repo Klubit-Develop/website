@@ -131,7 +131,7 @@ function Footer() {
                             </li>
                             <li>
                                 <a 
-                                    href="#" 
+                                    href="/faqs" 
                                     className="hover:transition"
                                     style={listItemStyle}
                                     onMouseEnter={(e) => e.currentTarget.style.color = '#FF336D'}
