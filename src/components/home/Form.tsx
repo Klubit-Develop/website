@@ -475,7 +475,7 @@ function Form() {
                         <motion.button
                             type="submit"
                             disabled={isSubmitting}
-                            className="px-10 py-4"
+                            className="px-10 py-4 w-full md:w-auto"
                             style={{
                                 borderRadius: '10px',
                                 backgroundColor: isSubmitting ? '#CC2957' : '#FF336D',
@@ -490,8 +490,6 @@ function Form() {
                                 cursor: isSubmitting ? 'not-allowed' : 'pointer',
                                 opacity: isSubmitting ? 0.7 : 1
                             }}
-                            whileHover={!isSubmitting ? { scale: 1.02 } : {}}
-                            whileTap={!isSubmitting ? { scale: 0.98 } : {}}
                         >
                             {isSubmitting ? 'Enviando...' : 'Solicitar'}
                         </motion.button>

@@ -46,7 +46,7 @@ function CTA() {
                         Forma parte de los primeros usuarios que tendrán acceso a la mejor comunidad de ocio del mundo.
                     </p>
                     <motion.button
-                        className="px-8 py-3 transition-all duration-300"
+                        className="w-full md:w-auto px-8 py-3 transition-all duration-300"
                         style={{
                             borderRadius: '10px',
                             background: '#FF336D',
@@ -63,8 +63,6 @@ function CTA() {
                             textOverflow: 'ellipsis',
                             whiteSpace: 'nowrap'
                         }}
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
                     >
                         Descarga la App
                     </motion.button>

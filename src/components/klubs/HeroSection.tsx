@@ -54,7 +54,7 @@ function HeroSection() {
                     Con Klubit controlas reservas, entradas y consumiciones desde una sola plataforma, potenciada con IA para hacer tu trabajo más fácil.
                 </motion.p>
                 <motion.button
-                    className="px-8 py-4 rounded-lg transition transform hover:scale-105 cursor-pointer"
+                    className="w-full md:w-auto px-8 py-4 rounded-lg cursor-pointer"
                     style={{
                         overflow: 'hidden',
                         color: '#F9F9FA',

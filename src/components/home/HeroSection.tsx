@@ -53,7 +53,7 @@ function HeroSection() {
                     La plataforma que conecta Klubs, usuarios, RRPPs y marcas con IA
                 </motion.p>
                 <motion.button
-                    className="px-8 py-4 rounded-lg transition transform hover:scale-105 cursor-pointer"
+                    className="w-full md:w-auto px-8 py-4 rounded-lg cursor-pointer"
                     style={{
                         overflow: 'hidden',
                         color: '#F9F9FA',

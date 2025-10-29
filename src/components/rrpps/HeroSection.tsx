@@ -54,7 +54,7 @@ function HeroSection() {
                     Con Klubit trabajas mejor, ganas más y ofreces a tu club una herramienta única para gestionar clientes, reservas y eventos.
                 </motion.p>
                 <motion.button
-                    className="px-8 py-4 rounded-lg transition transform hover:scale-105 cursor-pointer"
+                    className="w-full md:w-auto px-8 py-4 rounded-lg cursor-pointer"
                     style={{
                         overflow: 'hidden',
                         color: '#F9F9FA',
