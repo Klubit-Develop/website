@@ -300,7 +300,7 @@ function Navigation() {
                                             </Link>
 
                                             {/* Usuarios */}
-                                            <Link to="/usuarios" className="flex items-start gap-3 py-3 group cursor-pointer" onClick={toggleMenu}>
+                                            <Link to="/users" className="flex items-start gap-3 py-3 group cursor-pointer" onClick={toggleMenu}>
                                                 <User size={20} strokeWidth={1.5} className="text-[#ECF0F5] group-hover:text-[#E5FF88] transition-colors" style={{ flexShrink: 0, marginTop: '2px' }} />
                                                 <div>
                                                     <h4 className="text-[#ECF0F5] group-hover:text-[#E5FF88] transition-colors" style={{
@@ -348,7 +348,7 @@ function Navigation() {
                                             </Link>
 
                                             {/* Marcas */}
-                                            <Link to="/marcas" className="flex items-start gap-3 py-3 group cursor-pointer" onClick={toggleMenu}>
+                                            <Link to="/brands" className="flex items-start gap-3 py-3 group cursor-pointer" onClick={toggleMenu}>
                                                 <Tag size={20} strokeWidth={1.5} className="text-[#ECF0F5] group-hover:text-[#E5FF88] transition-colors" style={{ flexShrink: 0, marginTop: '2px' }} />
                                                 <div>
                                                     <h4 className="text-[#ECF0F5] group-hover:text-[#E5FF88] transition-colors" style={{
@@ -377,7 +377,7 @@ function Navigation() {
                                 {/* Conócenos */}
                                 <div className="border-t border-white/10 pt-4">
                                     <Link
-                                        to="/conocenos"
+                                        to="/about-us"
                                         className="block py-3"
                                         onClick={toggleMenu}
                                         style={{
@@ -395,7 +395,7 @@ function Navigation() {
 
                             {/* Button at bottom */}
                             <div className="mt-auto pt-4">
-                                <button className="w-full flex justify-center items-center hover:bg-white/20 transition cursor-pointer" style={{
+                                <Link to="https://manager.klubit.io/" className="w-full flex justify-center items-center hover:bg-white/20 transition cursor-pointer" style={{
                                     padding: '12px 16px',
                                     gap: '8px',
                                     borderRadius: '8px',
@@ -408,7 +408,7 @@ function Navigation() {
                                     lineHeight: 'normal'
                                 }}>
                                     Accede al Klub Manager
-                                </button>
+                                </Link>
                             </div>
                         </div>
                     </div>
