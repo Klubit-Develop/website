@@ -152,7 +152,7 @@ function Form() {
 
     return (
         <section className="py-20 px-8 sm:px-12 lg:px-24" style={{ backgroundColor: '#0C141B' }}>
-            <div className="w-full max-w-7xl">
+            <div className="w-full max-w-8xl">
                 <AnimatedSection variants={fadeInUp}>
                     <p className="mb-4" style={{
                         color: '#E5FF88',
@@ -177,7 +177,7 @@ function Form() {
                 </AnimatedSection>
 
                 <AnimatedSection variants={fadeIn}>
-                    <div className="w-full md:pl-16 lg:pl-24 md:pr-16 lg:pr-24">
+                    <div className="w-full">
                         <form onSubmit={handleSubmit} className="space-y-6 w-full">
                         <div className="grid md:grid-cols-2 gap-6">
                             <div>

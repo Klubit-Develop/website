@@ -17,7 +17,6 @@ const fadeIn: Variants = {
 };
 
 function History() {
-    const [scrollPosition, setScrollPosition] = useState(0);
     const [expandedCards, setExpandedCards] = useState<Set<number>>(new Set());
 
     const historyItems = [
@@ -118,7 +117,7 @@ function History() {
                                 return (
                                     <motion.div
                                         key={item.title}
-                                        className="group overflow-hidden flex-shrink-0 snap-center"
+                                        className="group overflow-hidden shrink-0 snap-center"
                                         layout
                                         style={{
                                             position: 'relative',

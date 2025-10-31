@@ -125,7 +125,7 @@ function PrivacyList() {
 
     if (loading) {
         return (
-            <section className="py-20 sm:px-12 lg:px-24" style={{ backgroundColor: '#0C141B' }}>
+            <section className="py-10 sm:px-12 lg:px-24">
                 <div className="w-full max-w-7xl mx-auto">
                     <p style={{
                         color: '#ECF0F5',
@@ -142,7 +142,7 @@ function PrivacyList() {
 
     if (error) {
         return (
-            <section className="py-20 sm:px-12 lg:px-24" style={{ backgroundColor: '#0C141B' }}>
+            <section className="py-10 sm:px-12 lg:px-24">
                 <div className="w-full max-w-7xl mx-auto">
                     <p style={{
                         color: '#FF336D',
@@ -158,8 +158,8 @@ function PrivacyList() {
     }
 
     return (
-        <section className="py-20 sm:px-12 lg:px-24" style={{ backgroundColor: '#0C141B' }}>
-            <div className="w-full max-w-7xl mx-auto">
+        <section className="py-10 sm:px-12 lg:px-24">
+            <div className="w-full max-w-7xl">
                 <div className="space-y-8">
                     {sections
                         .sort((a, b) => a.order - b.order)

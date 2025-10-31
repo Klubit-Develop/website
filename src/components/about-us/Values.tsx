@@ -1,7 +1,7 @@
 import { motion, type Variants } from 'framer-motion';
 import AnimatedSection from '../common/AnimatedSection';
 
-import Historia01 from '../../assets/images/about-us/historia01.png';
+import Historia04 from '../../assets/images/about-us/historia04.jpg';
 
 const fadeIn: Variants = {
     hidden: { opacity: 0 },
@@ -18,10 +18,9 @@ function Values() {
             <div 
                 className="absolute inset-0 z-0"
                 style={{
-                    backgroundImage: `url(${Historia01})`,
+                    backgroundImage: `url(${Historia04})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
-                    filter: 'brightness(0.3)',
                 }}
             />
             
