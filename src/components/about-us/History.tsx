@@ -18,14 +18,47 @@ const fadeIn: Variants = {
 
 function History() {
     const [scrollPosition, setScrollPosition] = useState(0);
+    const [expandedCards, setExpandedCards] = useState<Set<number>>(new Set());
 
     const historyItems = [
-        { title: 'El comienzo', image: Historia01 },
-        { title: 'El concepto', image: Historia02 },
-        { title: 'El equipo', image: Historia03 },
-        { title: 'El desafío', image: Historia04 },
-        { title: 'La Visión', image: Historia05 }
+        { 
+            title: 'El comienzo', 
+            image: Historia01,
+            content: 'Lo que nació como una conversación entre amigos se convirtió en una misión para revolucionar la forma en que vivimos la noche.'
+        },
+        { 
+            title: 'El concepto', 
+            image: Historia02,
+            content: 'Klubit no es solo una plataforma, es una comunidad. Un lugar donde usuarios, locales, RRPPs y marcas se encuentran para crear experiencias memorables, impulsadas por la tecnología y la creatividad.'
+        },
+        { 
+            title: 'El equipo', 
+            image: Historia03,
+            content: 'Somos un grupo de jóvenes con una visión clara: transformar el ocio con inteligencia artificial, pero sin perder la esencia de lo humano: la conexión, la emoción y la diversión.'
+        },
+        { 
+            title: 'El desafío', 
+            image: Historia04,
+            content: 'La industria del ocio llevaba años atrapada en el pasado. Nuestro reto es claro: digitalizar, optimizar y personalizar cada interacción para que cada salida, cada evento y cada momento cuente más.'
+        },
+        { 
+            title: 'La Visión', 
+            image: Historia05,
+            content: 'Creemos en un futuro donde el ocio esté en nuestras manos, donde cada experiencia sea única y cada persona se sienta parte de algo más grande. Ese futuro ya está aquí, y se llama Klubit.'
+        }
     ];
+
+    const toggleCard = (index: number) => {
+        setExpandedCards(prev => {
+            const newSet = new Set(prev);
+            if (newSet.has(index)) {
+                newSet.delete(index);
+            } else {
+                newSet.add(index);
+            }
+            return newSet;
+        });
+    };
 
     const handleScroll = (direction: 'left' | 'right') => {
         const container = document.getElementById('history-carousel');
@@ -79,98 +112,145 @@ function History() {
                                 WebkitOverflowScrolling: 'touch'
                             }}
                         >
-                            {historyItems.map((item, index) => (
-                                <motion.div
-                                    key={item.title}
-                                    className="group cursor-pointer overflow-hidden flex-shrink-0 snap-center"
-                                    style={{
-                                        position: 'relative',
-                                        display: 'flex',
-                                        width: 'calc(100vw - 80px)',
-                                        maxWidth: '380px',
-                                        height: '520px',
-                                        padding: '36px 36px 72px 36px',
-                                        flexDirection: 'column',
-                                        justifyContent: 'flex-end',
-                                        alignItems: 'flex-end',
-                                        borderRadius: '20px',
-                                        border: '2px solid #3E3E3E',
-                                    }}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                                    viewport={{ once: true }}
-                                >
-                                    {/* Imagen de fondo con animación */}
+                            {historyItems.map((item, index) => {
+                                const isExpanded = expandedCards.has(index);
+                                
+                                return (
                                     <motion.div
-                                        className="absolute inset-0"
+                                        key={item.title}
+                                        className="group overflow-hidden flex-shrink-0 snap-center"
+                                        layout
                                         style={{
-                                            background: `url(${item.image}) lightgray 50% / cover no-repeat`,
-                                            backgroundSize: 'cover',
-                                            backgroundPosition: 'center',
+                                            position: 'relative',
+                                            display: 'flex',
+                                            width: 'calc(100vw - 80px)',
+                                            maxWidth: '380px',
+                                            minHeight: '520px',
+                                            padding: '36px',
+                                            flexDirection: 'column',
+                                            justifyContent: 'space-between',
+                                            alignItems: 'flex-start',
                                             borderRadius: '20px',
+                                            border: '2px solid #3E3E3E',
                                         }}
-                                        whileHover={{
-                                            scale: 1.08,
-                                            transition: { duration: 0.4, ease: 'easeOut' }
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ 
+                                            layout: { duration: 0.5, ease: [0.4, 0, 0.2, 1] },
+                                            duration: 0.6, 
+                                            delay: index * 0.1 
                                         }}
-                                    />
-
-                                    {/* Gradiente overlay */}
-                                    <div
-                                        className="absolute inset-0 pointer-events-none"
-                                        style={{
-                                            background: 'linear-gradient(0deg, rgba(4, 4, 4, 0.00) 0%, rgba(4, 4, 4, 0.50) 100%)',
-                                            borderRadius: '20px',
-                                        }}
-                                    />
-
-                                    {/* Título en la parte superior izquierda */}
-                                    <div style={{
-                                        position: 'absolute',
-                                        top: '36px',
-                                        left: '36px',
-                                        zIndex: 10
-                                    }}>
-                                        <h3 style={{
-                                            color: '#E5FF88',
-                                            textShadow: '0 0 5px rgba(0, 0, 0, 0.50)',
-                                            fontFamily: '"Helvetica Now Display", -apple-system, BlinkMacSystemFont, sans-serif',
-                                            fontSize: '32px',
-                                            fontStyle: 'normal',
-                                            fontWeight: 500,
-                                            lineHeight: '42px'
-                                        }}>
-                                            {item.title}
-                                        </h3>
-                                    </div>
-
-                                    {/* Badge "Ver más" alineado a la derecha abajo */}
-                                    <div
-                                        className="px-4 py-2 transition-transform duration-300 group-hover:scale-105"
-                                        style={{
-                                            position: 'absolute',
-                                            bottom: '20px',
-                                            right: '20px',
-                                            borderRadius: '20px',
-                                            border: '1.5px solid #3E3E3E',
-                                            background: 'rgba(4, 4, 4, 0.40)',
-                                            backdropFilter: 'blur(2.5px)',
-                                            overflow: 'hidden',
-                                            color: '#ECF0F5',
-                                            textOverflow: 'ellipsis',
-                                            fontFamily: '"Helvetica Now Display", -apple-system, BlinkMacSystemFont, sans-serif',
-                                            fontSize: '14px',
-                                            fontStyle: 'normal',
-                                            fontWeight: 700,
-                                            lineHeight: 'normal',
-                                            zIndex: 10
-                                        }}
+                                        viewport={{ once: true }}
                                     >
-                                        Ver más
-                                    </div>
-                                </motion.div>
-                            ))}
+                                        {/* Imagen de fondo con animación */}
+                                        <motion.div
+                                            className="absolute inset-0"
+                                            style={{
+                                                background: `url(${item.image}) lightgray 50% / cover no-repeat`,
+                                                backgroundSize: 'cover',
+                                                backgroundPosition: 'center',
+                                                borderRadius: '20px',
+                                            }}
+                                            whileHover={{
+                                                scale: 1.08,
+                                                transition: { duration: 0.4, ease: 'easeOut' }
+                                            }}
+                                        />
+
+                                        {/* Gradiente overlay */}
+                                        <motion.div
+                                            className="absolute inset-0 pointer-events-none"
+                                            style={{
+                                                borderRadius: '20px',
+                                            }}
+                                            animate={{
+                                                background: isExpanded 
+                                                    ? 'linear-gradient(0deg, rgba(4, 4, 4, 0.95) 0%, rgba(4, 4, 4, 0.70) 100%)'
+                                                    : 'linear-gradient(0deg, rgba(4, 4, 4, 0.00) 0%, rgba(4, 4, 4, 0.50) 100%)',
+                                            }}
+                                            transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
+                                        />
+
+                                        {/* Contenedor superior con título */}
+                                        <div style={{
+                                            position: 'relative',
+                                            zIndex: 10,
+                                            width: '100%'
+                                        }}>
+                                            <h3 style={{
+                                                color: '#E5FF88',
+                                                textShadow: '0 0 5px rgba(0, 0, 0, 0.50)',
+                                                fontFamily: '"Helvetica Now Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                                                fontSize: '32px',
+                                                fontStyle: 'normal',
+                                                fontWeight: 500,
+                                                lineHeight: '42px',
+                                                marginBottom: isExpanded ? '24px' : '0'
+                                            }}>
+                                                {item.title}
+                                            </h3>
+
+                                            {/* Contenido expandido */}
+                                            <motion.div
+                                                initial={false}
+                                                animate={{
+                                                    opacity: isExpanded ? 1 : 0,
+                                                    height: isExpanded ? 'auto' : 0,
+                                                    marginTop: isExpanded ? '24px' : 0,
+                                                }}
+                                                transition={{ 
+                                                    duration: 0.5, 
+                                                    ease: [0.4, 0, 0.2, 1],
+                                                    opacity: { duration: 0.3, delay: isExpanded ? 0.2 : 0 }
+                                                }}
+                                                style={{
+                                                    overflow: 'hidden',
+                                                    width: '100%'
+                                                }}
+                                            >
+                                                <p style={{
+                                                    color: '#ECF0F5',
+                                                    fontFamily: '"Helvetica Now Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                                                    fontSize: '18px',
+                                                    fontStyle: 'normal',
+                                                    fontWeight: 400,
+                                                    lineHeight: '28px',
+                                                    textAlign: 'left',
+                                                    margin: 0
+                                                }}>
+                                                    {item.content}
+                                                </p>
+                                            </motion.div>
+                                        </div>
+
+                                        {/* Badge "Ver más/Ver menos" con funcionalidad */}
+                                        <button
+                                            onClick={() => toggleCard(index)}
+                                            className="px-4 py-2 transition-transform duration-300 hover:scale-105 cursor-pointer"
+                                            style={{
+                                                position: 'relative',
+                                                alignSelf: 'flex-end',
+                                                borderRadius: '20px',
+                                                border: '1.5px solid #3E3E3E',
+                                                background: 'rgba(4, 4, 4, 0.40)',
+                                                backdropFilter: 'blur(2.5px)',
+                                                overflow: 'hidden',
+                                                color: '#ECF0F5',
+                                                textOverflow: 'ellipsis',
+                                                fontFamily: '"Helvetica Now Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                                                fontSize: '14px',
+                                                fontStyle: 'normal',
+                                                fontWeight: 700,
+                                                lineHeight: 'normal',
+                                                zIndex: 10,
+                                                marginTop: isExpanded ? '36px' : 'auto'
+                                            }}
+                                        >
+                                            {isExpanded ? 'Ver menos' : 'Ver más'}
+                                        </button>
+                                    </motion.div>
+                                );
+                            })}
                         </div>
 
                         {/* Botones de navegación - Debajo a la derecha en desktop */}
