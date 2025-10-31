@@ -4,3 +4,12 @@
     --font-helvetica-now-display: 'Helvetica Now Display', sans-serif;
     background-color: #000000;
 }
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}

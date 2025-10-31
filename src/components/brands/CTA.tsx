@@ -155,7 +155,7 @@ function CTA() {
                             textOverflow: 'ellipsis',
                             whiteSpace: 'nowrap'
                         }}
-                        onClick={() => navigate('/contacts')}
+                        onClick={() => navigate('/contact')}
                     >
                         Contáctanos
                     </motion.button>

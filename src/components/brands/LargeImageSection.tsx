@@ -64,7 +64,7 @@ function LargeImageSection() {
                                 textOverflow: 'ellipsis',
                                 whiteSpace: 'nowrap'
                             }}
-                            onClick={() => navigate('/contacts')}
+                            onClick={() => navigate('/contact')}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
